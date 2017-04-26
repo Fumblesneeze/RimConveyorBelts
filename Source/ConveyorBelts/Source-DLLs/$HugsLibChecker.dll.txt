@@ -1,0 +1,1 @@
+https://github.com/UnlimitedHugs/RimworldHugsLibChecker/blob/master/Mods/HugsLibChecker/Assemblies/$HugsLibChecker.dll?raw=true

@@ -1,2 +1,5 @@
-# RimConveyorBelts
-New Rimworld mod created using ROMM Mod Creator.
+### ConveyorBelts ###
+
+Requires HugsLib.
+
+Enter your description here.
