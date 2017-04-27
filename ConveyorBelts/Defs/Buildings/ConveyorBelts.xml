@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ConveyorBelt</defName>
+    <label>Conveyor Belt</label>
+    <thingClass>ConveyorBelts.Building_ConveyorBase</thingClass>
+    
+    <graphicData>
+      <texPath>Things/Building/Linked/Conveyor/ConveyorBelt_Blueprint_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Custom8</li>
+      </linkFlags>	
+      <shaderType>Transparent</shaderType>
+      <color>(180,210,230)</color>
+    </graphicData>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Linked/Conveyor/ConveyorBelt_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+	<blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.40</fillPercent>
+    <tickerType>Normal</tickerType>
+    <neverMultiSelect>false</neverMultiSelect>	
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+	  <Mass>50</Mass>
+      <Flammability>0.8</Flammability>
+      <Beauty>-15</Beauty>
+    </statBases>
+    <description>Moves Shit.</description>
+    <size>(1,1)</size>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <costList>
+      <Steel>200</Steel>
+      <Component>4</Component>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+	<researchPrerequisites>
+      <li>Batteries</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Buildings>

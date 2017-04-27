@@ -1,12 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>ConveyorBelts</name>
+  <name>Conveyor Belts</name>
   <targetVersion>0.16.1393</targetVersion>
   <author>Fumblesneeze</author>
   <url>https://github.com/Fumblesneeze/RimConveyorBelts</url>
-  <description>
-Put Description here.
-
-https://github.com/Fumblesneeze/RimConveyorBelts
-  </description>
+  <description>Adds Conveyor Belts to Rimworld</description>
 </ModMetaData>

@@ -1,21 +1,19 @@
 {
-    "id": "ConveyorBelts",
-    "name": "ConveyorBelts",
-    "version": "0.0.1",
-    "targetGameVersion": "0.16.1393",
-    "authors": "Fumblesneeze",
-    "description": "",
-    "preview": "",
-    "homePage": "https://github.com/Fumblesneeze/RimConveyorBelts",
-    "category": "Content",
-    "source": {
-    },
-    "relationships": {
-        "requires": [
-        "HugsLib"
-        ]
-    },
-    "support": "",
-    "created": "2017-04-27T01:17:19.5896169+02:00",
-    "changeLog": "Initial Version"
+  "id": "ConveyorBelts",
+  "name": "Conveyor Belts",
+  "version": "0.0.1",
+  "targetGameVersion": "0.16.1393",
+  "authors": "Fumblesneeze",
+  "description": "Adds Conveyor Belts to Rimworld",
+  "shortDescription": "Adds Conveyor Belts to Rimworld",
+  "preview": "",
+  "homePage": "https://github.com/Fumblesneeze/RimConveyorBelts",
+  "category": "Content",
+  "source": {},
+  "relationships": {
+    "requires": "HugsLib"
+  },
+  "support": "",
+  "created": "2017-04-27T01:17:19.5896169+02:00",
+  "changeLog": "Animated transport of items"
 }
