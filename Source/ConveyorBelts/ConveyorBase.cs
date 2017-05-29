@@ -9,6 +9,8 @@ namespace ConveyorBelts
 {
     public class Building_ConveyorBase : Building, ITweenThings
     {
+        private int tick;
+
         public int StartingTicksToMoveThing (Thing thing) => 120;
 
         public override void SpawnSetup(Map map)
@@ -67,24 +69,32 @@ namespace ConveyorBelts
         {
             base.Tick();
 
-            var things = Map.thingGrid.ThingsAt(Position).Where(x => x.def.category == ThingCategory.Item);
+            tick++;
 
-            foreach(var thing in things)
+            if(tick >= (int)Find.TickManager.CurTimeSpeed)
             {
-                if (!StartingTicks.ContainsKey(thing))
+
+                var things = Map.thingGrid.ThingsAt(Position).Where(x => x.def.category == ThingCategory.Item);
+
+                foreach (var thing in things)
                 {
-                    StartingTicks[thing] = RemainingTicks[thing] = StartingTicksToMoveThing(thing);
+                    if (!StartingTicks.ContainsKey(thing))
+                    {
+                        StartingTicks[thing] = RemainingTicks[thing] = StartingTicksToMoveThing(thing);
+                    }
+
+                    RemainingTicks[thing] -= tick;
+
+                    if (RemainingTicks[thing] <= 0)
+                    {
+                        thing.Position = NextCell;
+                        Map.mapDrawer.MapMeshDirty(NextCell, MapMeshFlag.Things, true, false);
+                        StartingTicks.Remove(thing);
+                        RemainingTicks.Remove(thing);
+                    }
                 }
 
-                RemainingTicks[thing]--;
-
-                if(RemainingTicks[thing] == 0)
-                {
-                    thing.Position = NextCell;
-                    Map.mapDrawer.MapMeshDirty(NextCell, MapMeshFlag.Things, true, false);
-                    StartingTicks.Remove(thing);
-                    RemainingTicks.Remove(thing);
-                }
+                tick = 0;
             }
         }
 

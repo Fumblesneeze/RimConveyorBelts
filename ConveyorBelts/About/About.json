@@ -15,5 +15,5 @@
   },
   "support": "",
   "created": "2017-04-27T01:17:19.5896169+02:00",
-  "changeLog": "Animated transport of items"
+  "changeLog": "skip ticks on high speed"
 }
